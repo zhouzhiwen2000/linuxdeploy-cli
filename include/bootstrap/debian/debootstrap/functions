@@ -945,6 +945,7 @@ extract_ar_deb_field () {
 		control.tar.gz) cat_cmd=zcat ;;
 		control.tar.xz) cat_cmd=xzcat ;;
 		control.tar)    cat_cmd=cat ;;
+		control.tar.zst) cat_cmd=zstdcat ;;
 		*) error 1 UNKNOWNCONTROLCOMP "Unknown compression type for %s in %s" "$tarball" "$pkg" ;;
 	esac
 
